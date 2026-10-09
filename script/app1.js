@@ -29,9 +29,15 @@ listaDeTeclas.forEach((tecla, indice) => {
     const instrumento = tecla.classList[1];
     const audio = `#tocar_${instrumento}`;
 
+    // Pega a imagem que está dentro deste botão
+    const imgCapa = tecla.querySelector(".album");
+
     tecla.onclick = function () {
 
         tocarSom(audio);
+
+        // Troca somente a imagem deste botão
+        imgCapa.src = imagens[indice];
     };
 
     tecla.onkeydown = function (event) {
