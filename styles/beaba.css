@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../assets/images/FundoBeaba.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cabecalho {
+    background-color: #a5cfe4e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 20px;
+    gap: 15px;
+    width: 100%;
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(28px, 5vw, 40px);
+    color: #27434e;
+    text-align: center;
+}
+
+.cabecalho h1 {
+    margin: 0;
+}
+
+.cabecalho_disco__adela {
+    width: 90px;
+    height: auto;
+    animation: girar 5s linear infinite;
+}
+
+.albuns {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 0 15px;
+    flex-grow: 1;
+}
+
+.albuns_botoes {
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-bottom: 50px;
+}
+
+.tecla {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.albuns_span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(66, 122, 139, 0.8);
+    width: 100%;
+    max-width: 270px;
+    padding: 15px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.albuns_span:hover {
+    background-color: rgba(21, 50, 77, 0.8);
+    transform: translateY(-5px);
+}
+
+.album {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.span_adela {
+    margin-top: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+
+.rodape {
+    background-color: #a5cfe4e5;
+    padding: 15px;
+    text-align: center;
+    color: rgb(53, 83, 101);
+    font-size: 0.9rem;
+}
+
+.rodape a {
+    text-decoration: none;
+    color: rgb(42, 65, 86);
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 480px) {
+    .cabecalho_disco__adela {
+        width: 65px;
+    }
+
+    .span_adela {
+        font-size: 14px;
+    }
+}
